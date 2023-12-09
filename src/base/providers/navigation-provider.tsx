@@ -32,9 +32,6 @@ export const NavigationProvider = ({
         else if (inViewProjects) setCurrentSection('projects');
     }, [inViewAbout, inViewContact, inViewExperience, inViewProjects]);
 
-    console.dir(inViewAbout, { depth: null })
-    console.dir(inViewContact, { depth: null })
-
     return (
         <NavigationContext.Provider
             value={{
