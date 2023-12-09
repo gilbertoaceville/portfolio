@@ -1,0 +1,12 @@
+{
+    "id": "about",
+    "title": "Front-End Engineer",
+    "linkedin": "https://www.linkedin.com/in/james-gilbert-b10149264/",
+    "github": "https://github.com/gilbertoaceville",
+    "email": "gilbertoaceville@gmail.com",
+    "description": "<p class='text-neutral-700 dark:text-neutral-300'>Greetings! 👋😁. I'm a seasoned software engineer with a strong focus on Front-End development, constituting <strong class='text-neutral-900 dark:text-neutral-100'>60% of my professional endeavors</strong>. Having immersed myself in the <strong class='text-neutral-900 dark:text-neutral-100'>realms of internet and web services for the past 4 years</strong>, I recognize the paramount importance of leveraging cutting-edge technologies to effectively engage with target audiences 🚀.</p> <p class='text-neutral-700 dark:text-neutral-300'>My days are predominantly filled with coding exploits 👨🏽‍💻. During moments of respite, you'll find me either traversing the vast realms of the internet or delving into the intricacies of new front-end technologies 🚀.</p> <p class='text-neutral-700 dark:text-neutral-300'>While I've seamlessly transitioned between front-end and back-end development responsibilities, my achievements stem from consistently incorporating the latest technological trends to uphold and optimize applications. <strong class='text-neutral-900 dark:text-neutral-100'>Let's collaboratively create a mutually beneficial situation</strong> 😉.</p>",
+    "name": "Gilbert James",
+    "phone": "+234-08140942783",
+    "location": "",
+    "tags": ["Javascript", "Typescript", "React", "React Native", "CMS", "Node"]
+}

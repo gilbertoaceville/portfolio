@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/base/styles/globals.css';
 import { Providers } from '@/base/providers/providers'
-import ThemeToggle from '@/components/theme/theme-toggle'
+import ThemeToggle from '@/components/modules/theme/theme-toggle'
 
 const inter = Inter({ subsets: ['latin'] })
 

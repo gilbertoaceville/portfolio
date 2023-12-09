@@ -4,14 +4,10 @@ import { HoverCardContent } from '@radix-ui/react-hover-card';
 import Link from 'next/link';
 
 import { HoverCard, HoverCardTrigger } from '@/components/ui/hover-card';
+import aboutJSON from "@/base/config/about.json";
 import { GithubIcon, LinkedInIcon, EmailIcon } from './icons.const';
 
 type AboutProps = Pick<About, "github" | "linkedin" | "email">
-const aboutJSON: AboutProps = {
-    linkedin: "https://www.linkedin.com/in/james-gilbert-b10149264/",
-    github: "https://github.com/gilbertoaceville",
-    email: "gilbertoaceville@gmail.com"
-}
 
 export default function IconLinks({ about = aboutJSON }: { about?: AboutProps }) {
     const linkedInUsername = about.linkedin.replace(/\/$/, '').split('/').pop();

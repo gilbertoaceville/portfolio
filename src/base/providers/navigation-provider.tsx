@@ -9,7 +9,7 @@ const NavigationContext = createContext({
     refAbout: null,
     refContact: null,
     currentSection: 'about' as Section,
-    setCurrentSection: (section: Section) => {},
+    setCurrentSection: (section: Section) => { },
 });
 
 export const NavigationProvider = ({
@@ -32,7 +32,8 @@ export const NavigationProvider = ({
         else if (inViewProjects) setCurrentSection('projects');
     }, [inViewAbout, inViewContact, inViewExperience, inViewProjects]);
 
-    console.log({ refAbout, refProjects, refContact, refExperience })
+    console.dir(inViewAbout, { depth: null })
+    console.dir(inViewContact, { depth: null })
 
     return (
         <NavigationContext.Provider

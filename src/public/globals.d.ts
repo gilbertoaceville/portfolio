@@ -49,7 +49,7 @@ type Contact = {
 };
 
 type About = {
-    id: number;
+    id: number | string;
     title: string;
     description: string;
     name: string;
@@ -69,4 +69,25 @@ type Job = {
     pay?: string;
     description: string;
     href: string;
+};
+
+type ProjectInfo = {
+    name: string;
+    type: string;
+    description: string;
+    tech: string[];
+    image: string;
+    links: {
+        github: string;
+        demo: string;
+    };
+};
+
+type ExperienceInfo = {
+    title: string;
+    content: {
+        position: string;
+        period: string;
+        items: string[];
+    };
 };
