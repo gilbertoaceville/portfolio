@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '@/base/styles/globals.css';
+import { Providers } from '@/base/providers/providers'
+import ThemeToggle from '@/components/theme/theme-toggle'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +17,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html suppressHydrationWarning={true}
+      lang="en"
+      className="background-background select-none scroll-smooth text-base text-foreground selection:bg-neutral-300 selection:text-neutral-900 dark:selection:bg-neutral-400 dark:selection:text-neutral-900 sm:select-auto">
+      <body className="relative mx-auto h-full w-full max-w-10xl">
+        <Providers>
+          <div className="fixed bottom-8 right-8 z-10 sm:bottom-12">
+            <ThemeToggle />
+          </div>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }
