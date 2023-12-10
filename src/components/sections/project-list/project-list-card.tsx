@@ -5,8 +5,12 @@ import { MouseEvent } from 'react';
 import TechLinks from '@/components/modules/tech-links';
 import Link from 'next/link';
 import { useFilter } from '@/base/providers/filter-provider';
+import clsx from 'clsx';
 
-export default function ProjectListCard(props: ProjectInfo) {
+type ProjectListCardProps = ProjectInfo & {
+    modal?: boolean;
+};
+export default function ProjectListCard(props: ProjectListCardProps) {
     const { filterCompany, filterTech } = useFilter();
 
     function handleFilterCompany(e: MouseEvent) {
@@ -21,7 +25,12 @@ export default function ProjectListCard(props: ProjectInfo) {
         filterTech(tech);
     }
     return (
-        <article className="mx-auto flex w-full max-w-5xl flex-col gap-6 sm:flex-row">
+        <article
+            className={clsx([
+                'mx-auto flex w-full max-w-5xl flex-col gap-6 sm:flex-row',
+                { 'sm:flex-col items-center': props.modal },
+            ])}
+        >
             <div className="relative mt-4 h-[300px] w-full overflow-hidden rounded-lg sm:w-[420px] xl:w-[620px]">
                 <Image src={props.image} alt="Featured project" fill />
                 <div className="absolute inset-0 z-10 h-full w-full bg-primary opacity-60" />
@@ -58,7 +67,7 @@ export default function ProjectListCard(props: ProjectInfo) {
                     {props.tech.map((tech) => (
                         <li
                             key={`${props.name}-${tech}`}
-                            className="small-copy cursor-pointer p-0.5 px-1 font-mono hover:bg-primary"
+                            className="small-copy cursor-pointer p-0.5 px-1 hover:bg-primary"
                             onClick={(e) => handleFilterTech(e, tech)}
                         >
                             {tech}

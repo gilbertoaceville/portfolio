@@ -1,22 +1,26 @@
 'use client';
 
-import { Fragment, useMemo } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 
 import { useFilter } from '@/base/providers/filter-provider';
 import BackButton from '@/components/ui/button/components/back-button';
 import FilterPopover from '@/components/modules/filter-popover';
 import Filters from '@/components/modules/filters';
+import { Switch } from '@/components/ui/switch';
 import ProjectListCard from './project-list-card';
+import ProjectCard from '../projects/project-card';
 
 export default function ProjectList({
     projects,
     modal,
+    isList,
 }: {
     projects: ProjectInfo[];
     modal?: boolean;
+    isList?: boolean;
 }) {
-    const { filterCompany, filterType, filterTech, filterProjects } =
-        useFilter();
+    const { filterCompany, filterTech, filterProjects } = useFilter();
+    const [toggle, setToggle] = useState(isList);
 
     const sortedProjects = useMemo(
         () =>
@@ -34,12 +38,34 @@ export default function ProjectList({
         [projects, filterProjects],
     );
 
+    const renderProjectItem = (project: ProjectInfo, index: number) => {
+        return toggle ? (
+            <ProjectListCard {...project} modal={modal} />
+        ) : (
+            <ProjectCard
+                index={index}
+                {...project}
+                modal
+                handleCompanyClick={filterCompany}
+                handleTechClick={filterTech}
+            />
+        );
+    };
+
     return (
         <Fragment>
             <div>
                 <div className="grid w-full grid-cols-12 pb-4 pt-4 text-center md:pb-2">
                     <div className="col-span-4 flex items-center">
                         {!modal && <BackButton />}
+                        {modal && (
+                            <Switch
+                                checked={toggle}
+                                onCheckedChange={() => setToggle((prev) => !prev)}
+                                id="edit-mode"
+                                title="Switch Layout"
+                            />
+                        )}
                     </div>
                     <h2 className="col-span-4 select-none text-2xl">
                         Projects
@@ -50,10 +76,10 @@ export default function ProjectList({
                 </div>
                 <Filters />
             </div>
-            <div className="flex flex-col gap-10 pb-8 pt-4">
-                {sortedProjects.map((project) => (
-                    <ProjectListCard key={project.name} {...project} />
-                ))}
+            <div className="flex flex-col items-center gap-10 pb-8 pt-4">
+                {sortedProjects.map((project, index) =>
+                    renderProjectItem(project, index),
+                )}
             </div>
         </Fragment>
     );
