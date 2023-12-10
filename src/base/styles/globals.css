@@ -33,6 +33,7 @@
         --ring: 0 0% 3.9%;
 
         --radius: 0.5rem;
+        --color-paper: hsl(0, 0%, 20%);
     }
 
     .dark {
@@ -63,6 +64,7 @@
         --border: 0 0% 40%;
         --input: 0 0% 50%;
         --ring: 0 0% 83.1%;
+        --color-paper: 44 46 62;
     }
 }
 
@@ -71,6 +73,21 @@
         @apply border-border;
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background font-mono text-foreground;
+    }
+
+    .small-copy {
+        @apply text-[0.75rem] sm:text-[0.875rem];
+    }
+}
+
+@layer components {
+    .tech-list {
+        @apply bg-paper flex items-center gap-4 rounded-br-lg rounded-tr-lg pr-4 w-fit;
+    }
+
+    .tech-list::before {
+        content: '//';
+        @apply rounded-bl-lg rounded-tl-lg bg-primary px-2 py-0.5 sm:py-2;
     }
 }

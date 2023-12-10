@@ -4,6 +4,7 @@ import TagList from '@/components/modules/tag-list';
 import About from '@/components/sections/about';
 import aboutJSON from "@/base/config/about.json";
 import Projects from '@/components/sections/projects';
+import { PROJECTS_DATA } from '@/base/config/constants';
 
 export default async function Page() {
     return (
@@ -20,7 +21,7 @@ export default async function Page() {
                         >
                             {aboutJSON.title}
                         </div>
-                        <TagList tags={aboutJSON.tags} />
+                        <TagList tags={aboutJSON.tags} className='lg:w-[400px]' />
                     </div>
                     <SectionView />
                 </div>
@@ -30,7 +31,7 @@ export default async function Page() {
             </nav>
             <div className="ml-auto flex h-full w-full flex-col gap-12 md:z-10 md:w-2/3 md:gap-24 lg:w-1/2">
                 <About about={aboutJSON} />
-                <Projects />
+                <Projects projects={PROJECTS_DATA} />
                 <h1>Experiences</h1>
                 <h1>Contact</h1>
             </div>

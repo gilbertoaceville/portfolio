@@ -1,4 +1,4 @@
-export const FEATURED_PROJECTS_DATA: ProjectInfo[] = [
+export const PROJECTS_DATA: ProjectInfo[] = [
     {
       name: 'Wholesale E-commerce',
       type: 'Website platform',
