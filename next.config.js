@@ -40,6 +40,14 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
+    async rewrites() {
+      return [
+          {
+              source: '/resume',
+              destination: '/Gilbert James - Resume.pdf',
+          },
+      ];
+  },
     async headers() {
         return [
           {

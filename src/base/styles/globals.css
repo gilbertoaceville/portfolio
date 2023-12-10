@@ -81,13 +81,42 @@
     }
 }
 
+@layer utilities {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @layer components {
+    .bullet-list > li {
+        @apply relative pl-[30px];
+    }
+    .bullet-list > li:before {
+        @apply absolute left-0 top-0 mr-3.5 text-primary-foreground;
+        content: '❯';
+    }
+
     .tech-list {
-        @apply bg-paper flex items-center gap-4 rounded-br-lg rounded-tr-lg pr-4 w-fit;
+        @apply bg-paper flex w-fit items-center gap-4 rounded-br-lg rounded-tr-lg pr-4;
     }
 
     .tech-list::before {
         content: '//';
         @apply rounded-bl-lg rounded-tl-lg bg-primary px-2 py-0.5 sm:py-2;
+    }
+
+    .tabs {
+        --lateral-offset: 41px;
+        margin-left: calc(var(--lateral-offset) * -1);
+        padding-left: var(--lateral-offset);
+        width: calc(100% + var(--lateral-offset) * 2);
+        @apply no-scrollbar visible relative flex touch-pan-x overflow-x-auto py-2.5 pr-2.5 sm:ml-0 sm:w-auto sm:min-w-fit sm:flex-col sm:p-0;
     }
 }

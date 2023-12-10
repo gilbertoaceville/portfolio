@@ -3,8 +3,11 @@ import IconLinks from '@/components/modules/social-icons';
 import TagList from '@/components/modules/tag-list';
 import About from '@/components/sections/about';
 import aboutJSON from "@/base/config/about.json";
+import contactJSON from "@/base/config/contact.json";
 import Projects from '@/components/sections/projects';
-import { PROJECTS_DATA } from '@/base/config/constants';
+import { EXPERIENCE_DATA, PROJECTS_DATA } from '@/base/config/constants';
+import Experience from '@/components/sections/experience';
+import Contact from '@/components/sections/contact';
 
 export default async function Page() {
     return (
@@ -32,8 +35,8 @@ export default async function Page() {
             <div className="ml-auto flex h-full w-full flex-col gap-12 md:z-10 md:w-2/3 md:gap-24 lg:w-1/2">
                 <About about={aboutJSON} />
                 <Projects projects={PROJECTS_DATA} />
-                <h1>Experiences</h1>
-                <h1>Contact</h1>
+                <Experience experiences={EXPERIENCE_DATA}/>
+                <Contact contact={contactJSON}/>
             </div>
         </>
     );
