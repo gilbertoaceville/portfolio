@@ -73,7 +73,9 @@ type Job = {
 
 type ProjectInfo = {
     name: string;
-    type: string;
+    label: string;
+    type?: "marketing" | "eCommerce" | "website" | "mobileApp"
+    company?: "personal" | "featured";
     description: string;
     tech: string[];
     image: string;

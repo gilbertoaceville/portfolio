@@ -25,10 +25,13 @@ function ListIconLink(props: ListIconLinkProps) {
 
 type IconLinksProps = {
     links: { github: string; demo: string };
+    display?: boolean;
     className?: string;
 };
 
 export default function TechLinks(props: IconLinksProps) {
+    if (!props.display) return null;
+
     return (
         <ul className={clsx(['flex items-center gap-4', props.className])}>
             {props.links.github && (

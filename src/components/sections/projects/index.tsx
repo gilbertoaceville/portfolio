@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Section from '@/components/modules/section';
 import ProjectCard from './project-card';
 
@@ -13,6 +15,13 @@ export default function Projects({ projects }: { projects: ProjectInfo[] }) {
                     />
                 ))}
             </div>
+            <Link
+                href="/projects"
+                scroll={false}
+                className="select-none pt-8 text-center text-lg hover:underline"
+            >
+                View All Projects
+            </Link>
         </Section>
     );
 }

@@ -19,7 +19,7 @@ export default function ProjectCard(props: ProjectCardProps) {
                 <div className="flex flex-col justify-between gap-2 xl:flex-row xl:items-end">
                     <div>
                         <span className="small-copy font-mono">
-                            {props.type}
+                            {props.label}
                         </span>
                         <h3>{props.name}</h3>
                     </div>
@@ -57,7 +57,7 @@ export default function ProjectCard(props: ProjectCardProps) {
                 ])}
             >
                 <p className="small-copy">{props.description}</p>
-                <TechLinks className="mt-4 justify-end" links={props.links} />
+                <TechLinks className="mt-4 justify-end" links={props.links} display />
             </div>
         </article>
     );
