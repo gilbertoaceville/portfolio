@@ -1,17 +1,29 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import { Code, LayoutTemplate } from 'lucide-react';
 import { MouseEvent } from 'react';
+import Link from 'next/link';
+import { usePlausible } from 'next-plausible';
 
 import TechLinks from '@/components/modules/tech-links';
-import Link from 'next/link';
 import { useFilter } from '@/base/providers/filter-provider';
-import clsx from 'clsx';
 
 type ProjectListCardProps = ProjectInfo & {
     modal?: boolean;
 };
 export default function ProjectListCard(props: ProjectListCardProps) {
+    const plausible = usePlausible();
     const { filterCompany, filterTech } = useFilter();
+
+    const viewProject = () => {
+        if (!props.name) return null;
+
+        return plausible('View Project', {
+            props: {
+                project: props.name,
+            },
+        });
+    };
 
     function handleFilterCompany(e: MouseEvent) {
         e.stopPropagation();
@@ -30,6 +42,7 @@ export default function ProjectListCard(props: ProjectListCardProps) {
                 'mx-auto flex w-full max-w-5xl flex-col gap-6 sm:flex-row',
                 { 'items-center sm:flex-col': props.modal },
             ])}
+            onClick={viewProject}
         >
             <div className="relative mt-4 h-[300px] w-full overflow-hidden rounded-lg sm:w-[420px] xl:w-[620px]">
                 <Image src={props.image} alt="Featured project" fill />

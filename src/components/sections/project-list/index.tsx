@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, useMemo, useState } from 'react';
+import { usePlausible } from 'next-plausible';
 
 import { useFilter } from '@/base/providers/filter-provider';
 import BackButton from '@/components/ui/button/components/back-button';
@@ -19,8 +20,14 @@ export default function ProjectList({
     modal?: boolean;
     isList?: boolean;
 }) {
+    const plausible = usePlausible();
     const { filterCompany, filterTech, filterProjects } = useFilter();
     const [toggle, setToggle] = useState(isList);
+
+    function handleToggle() {
+        setToggle((prev) => !prev);
+        plausible('Switch Project Layout');
+    }
 
     const sortedProjects = useMemo(
         () =>
@@ -61,7 +68,7 @@ export default function ProjectList({
                         {modal && (
                             <Switch
                                 checked={toggle}
-                                onCheckedChange={() => setToggle((prev) => !prev)}
+                                onCheckedChange={handleToggle}
                                 id="edit-mode"
                                 title="Switch Layout"
                             />

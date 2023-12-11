@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState } from 'react';
+import { usePlausible } from 'next-plausible';
 
 type FilterContextType = {
     companyFilter: string[];
@@ -32,13 +33,22 @@ export default function FilterProvider({
 }: {
     children: React.ReactNode;
 }) {
+    const plausible = usePlausible();
     const [companyFilter, setCompanyFilter] = useState<string[]>([]);
     const [typeFilter, setTypeFilter] = useState<string[]>([]);
     const [techFilter, setTechFilter] = useState<string[]>([]);
 
+    const analyze = (prop: string) =>
+        plausible('Filter', {
+            props: {
+                prop,
+            },
+        });
+
     const filterCompany = (company: string) => {
         if (companyFilter.includes(company)) return;
         setCompanyFilter([...companyFilter, company]);
+        analyze(company);
     };
 
     const removeCompanyFilter = (company: string) => {
@@ -48,15 +58,17 @@ export default function FilterProvider({
     const filterType = (type: string) => {
         if (typeFilter.includes(type)) return;
         setTypeFilter([...typeFilter, type]);
+        analyze(type);
     };
 
     const removeTypeFilter = (type: string) => {
         setTypeFilter(typeFilter.filter((c) => c !== type));
     };
 
-    const filterTech = (tag: string) => {
-        if (techFilter.includes(tag)) return;
-        setTechFilter([...techFilter, tag]);
+    const filterTech = (tech: string) => {
+        if (techFilter.includes(tech)) return;
+        setTechFilter([...techFilter, tech]);
+        analyze(tech);
     };
 
     const removeTechFilter = (tag: string) => {
