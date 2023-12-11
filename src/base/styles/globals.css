@@ -33,6 +33,7 @@
         --ring: 0 0% 3.9%;
 
         --radius: 0.5rem;
+        --color-paper: hsl(0, 0%, 20%);
     }
 
     .dark {
@@ -63,6 +64,7 @@
         --border: 0 0% 40%;
         --input: 0 0% 50%;
         --ring: 0 0% 83.1%;
+        --color-paper: 44 46 62;
     }
 }
 
@@ -71,6 +73,50 @@
         @apply border-border;
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background font-mono text-foreground;
+    }
+
+    .small-copy {
+        @apply text-[0.75rem] sm:text-[0.875rem];
+    }
+}
+
+@layer utilities {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@layer components {
+    .bullet-list > li {
+        @apply relative pl-[30px];
+    }
+    .bullet-list > li:before {
+        @apply absolute left-0 top-0 mr-3.5 text-primary-foreground;
+        content: '❯';
+    }
+
+    .tech-list {
+        @apply bg-paper flex w-fit items-center gap-4 rounded-br-lg rounded-tr-lg pr-4;
+    }
+
+    .tech-list::before {
+        content: '//';
+        @apply rounded-bl-lg rounded-tl-lg bg-primary px-2 py-0.5 sm:py-2;
+    }
+
+    .tabs {
+        --lateral-offset: 41px;
+        margin-left: calc(var(--lateral-offset) * -1);
+        padding-left: var(--lateral-offset);
+        width: calc(100% + var(--lateral-offset) * 2);
+        @apply no-scrollbar visible relative flex touch-pan-x overflow-x-auto py-2.5 pr-2.5 sm:ml-0 sm:w-auto sm:min-w-fit sm:flex-col sm:p-0;
     }
 }
