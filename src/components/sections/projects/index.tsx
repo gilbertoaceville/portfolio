@@ -6,8 +6,8 @@ import ProjectCard from './project-card';
 export default function Projects({ projects }: { projects: ProjectInfo[] }) {
     return (
         <Section id="projects">
-            <div className="flex flex-col sm:gap-[124px]">
-                {(projects || []).map((project, index) => (
+            <div className="flex flex-col sm:gap-[100px]">
+                {(projects || []).slice(0, 3).map((project, index) => (
                     <ProjectCard
                         key={project.name}
                         {...project}

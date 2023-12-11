@@ -1,120 +1,175 @@
 export const PROJECTS_DATA: ProjectInfo[] = [
     {
-      name: 'Wholesale E-commerce',
-      label: 'Website platform',
-      type: "eCommerce",
-      company: "featured",
-      description:
-        'After spend a few weeks learning from a manufacturing business inside their warehouse I proposed and co-created a wholesale e-commerce platforms.',
-      tech: ['React', 'MaterialUI', 'NodeJS', 'Firebase', 'GCP'],
-      image: '/featured/wholesale.webp',
-      links: {
-        github: '',
-        demo: '',
-      },
+        name: 'Dodonut',
+        label: 'Website platform',
+        type: 'website',
+        company: 'featured',
+        description:
+            'The website build is focused on climate sustainability reducing website carbon emission by >80% on each page visit.',
+        tech: ['Astro', 'Svelte', 'TailwindCSS', 'NodeJS'],
+        image: '/featured/dodonut.webp',
+        links: {
+            github: '',
+            demo: 'https://dodonut.com/',
+        },
     },
     {
-      name: 'Portfolio',
-      label: 'Website',
-      type: "website",
-      company: "personal",
-      description:
-        'This is the first iteration of my personal website. Here I will post about my experience, future projects and articles about tech.',
-      tech: ['React', 'TailwindCSS', 'NextJS', 'CMS', 'AWS'],
-      image: '/featured/portfolio.webp',
-      links: {
-        github: 'https://github.com/gilbertoaceville/portfolio',
-        demo: '/',
-      },
+        name: 'Portfolio',
+        label: 'Website Platform',
+        company: 'personal',
+        type: 'website',
+        description:
+            'Introducing my personal website! Expect updates on my experiences, upcoming projects, and tech articles.',
+        tech: ['Typescript', 'NextJS', 'TailwindCSS'],
+        image: '/personal/portfolio.webp',
+        links: {
+            github: 'https://github.com/gilbertoaceville/portfolio',
+            demo: 'https://james-gilbert.vercel.app/',
+        },
     },
     {
-      name: 'PetPlant',
-      label: 'IoT System + Mobile App',
-      company: "featured",
-      type: "marketing",
-      description:
-        'An IoT project  that transforms the Tamagotchi concept into a real experience. You can add your personal plant to the app and check its water level, sun light level and customize its appearance.',
-      tech: ['Arduino', 'Angular', 'Ionic', 'NodeJS', 'Firebase'],
-      image: '/featured/petplant.webp',
-      links: {
-        github: '',
-        demo: '',
-      },
+        name: 'Moebel24',
+        label: 'E-commerce',
+        type: 'eCommerce',
+        company: 'featured',
+        description:
+            'An e-commerce platform focused on home appliances, moebel incorporates one of the most complex filtration playing with many filter categories.',
+        tech: ['Typescript', 'NextJS', 'SCSS', 'Elastic Search', 'Vercel'],
+        image: '/featured/moebel.webp',
+        links: {
+            github: '',
+            demo: 'https://www.moebel24.de/',
+        },
     },
-  ];
+    {
+        name: 'Deeptrekker',
+        label: 'Marketing and E-commerce',
+        company: 'featured',
+        type: 'eCommerce',
+        description:
+            'Deeptrekker combines both worlds as a marketing and e-commerce website for ROVs, with a little tradeoff in performance, the website deals with large media resources.',
+        tech: ['Typescript', 'NextJS', 'GraphQL', 'Netlify', 'Contentful'],
+        image: '/featured/deeptrekker.webp',
+        links: {
+            github: '',
+            demo: 'https://www.deeptrekker.com/',
+        },
+    },
+    {
+        name: 'Beebole',
+        label: 'Marketing Website',
+        company: 'featured',
+        type: 'marketing',
+        description:
+            'Marketing website for time management tool, beebole is developed with gatsby under the hood and PiwikPro for all analytics.',
+        tech: ['Typescript', 'Gatsby', 'GraphQL', 'Netlify', 'Storyblok'],
+        image: '/featured/beebole.webp',
+        links: {
+            github: '',
+            demo: 'https://beebole.com/',
+        },
+    },
+    {
+        name: 'Deliverect',
+        label: 'Marketing Website',
+        company: 'featured',
+        type: 'marketing',
+        description:
+            'Marketing website managing online ordering operations, featuring a complex calculator to calculate estimations and online orders by vendors.',
+        tech: ['Javascript', 'Gatsby', 'GraphQL', 'Netlify', 'Contentful'],
+        image: '/featured/deliverect.webp',
+        links: {
+            github: '',
+            demo: 'https://www.deliverect.com/en',
+        },
+    },
+    {
+        name: 'Geo Coffee Store',
+        label: 'Website Platform',
+        company: 'personal',
+        type: 'website',
+        description: 'A simple personal coffee shop project with live geolocation services.',
+        tech: ['Javascript', 'NextJS', 'Vercel', "NodeJS"],
+        image: '/personal/coffee-store.webp',
+        links: {
+            github: 'https://github.com/gilbertoaceville/geolocation-coffee-store-with-next',
+            demo: 'https://geolocation-coffee-stores.vercel.app/',
+        },
+    },
+    {
+      name: 'Live Search App',
+      label: 'Website Platform',
+      company: 'personal',
+      type: 'website',
+      description: 'A simple live search application integrated with upsplash api.',
+      tech: ['React', 'Netlify'],
+      image: '/personal/bluecube-live-search.webp',
+      links: {
+          github: 'https://github.com/gilbertoaceville/bluecube-live-search-app',
+          demo: 'https://bluecube-live-search.netlify.app/',
+      },
+  },
+  {
+    name: 'Sample Store',
+    label: 'E-commerce',
+    company: 'personal',
+    type: 'eCommerce',
+    description: 'A mini e-commerce with cart mechanism built with Gatsby.',
+    tech: ['Redux', 'Gatsby', 'Vercel', 'Typescript'],
+    image: '/personal/sample-commerce.webp',
+    links: {
+        github: 'https://github.com/gilbertoaceville/gatsby-ecommerce-with-redux',
+        demo: 'https://gatsby-ecommerce-with-redux.vercel.app/',
+    },
+},
+];
 
-  export const EXPERIENCE_DATA: ExperienceInfo[] = [
+export const EXPERIENCE_DATA: ExperienceInfo[] = [
     {
-      title: 'Sitemate',
-      content: {
-        position: 'Fullstack Engineer',
-        period: 'June 2023 - Present',
-        items: [
-          'Responsible for the development of third party API integrations.',
-          'Deliver high quality production code to arrange the company’s needs.',
-          'Collaborate with product managers and designers to create seamless no-code experiences for company’s users.',
-        ],
-      },
+        title: 'Bejamas',
+        content: {
+            position: 'Frontend Developer',
+            period: 'February 2022 - Present',
+            items: [
+                'Researched and developed climate sustainable web projects such as the Dodonut project, reducing website carbon emissions by >80% on each page visit and attracting potential investors in line with the company’s long-term visions.',
+                'Worked with a team to develop and maintain services via Headless CMS including but not limited to Contentful, Storyblok, Dato, Sanity following Agile/SCRUM/Kanban methodologies.',
+                'Successfully planned performant and fast website development with the tribe(team), directly contributed to the growth of the company’s revenue.',
+                'Optimized web performance on finalized projects by over 55%, leveraging tools like WebPageTest, and Statsy for precise analysis and actionable insights. ',
+            ],
+        },
     },
     {
-      title: 'Pearlii',
-      content: {
-        position: 'Software Developer',
-        period: 'March 2021 - March 2023',
-        items: [
-          'Refactored 65% of the mobile app source code to implement code quality standards and normalize processes.',
-          'Reduced mobile app load speed by 28% using state management strategies and reactive programming.',
-          'Implemented a new website with the latest technology and reach a top performance score of 95+ measured by Lighthouse.',
-          'Engineered a server-less back-end that provides an API and background processes (cronjobs, queue, notifications) to multiple apps to be consumed on demand.',
-        ],
-      },
+        title: 'IFMA',
+        content: {
+            position: 'Senior Frontend Developer',
+            period: 'October 2020 - February 2022',
+            items: [
+                'Analyzed and implemented optimization cutting edge technologies on existing code base increasing page load by <3 secs.',
+                'Worked with the design team to develop new designs and functionalities for the second version of the streaming web app while assessing the designs for technical feasibility gaining investors trust with extra monetary commitment of $30000.',
+                'Effectively interacted with the Back-End Department regarding web application issues, working closely to develop innovative solutions notably the company’s streaming application.',
+            ],
+        },
     },
     {
-      title: 'UGG Australia',
-      content: {
-        position: 'Full Stack Developer',
-        period: 'January 2020 - February 2021',
-        items: [
-          `Research and analyze the company's core business to transform its operational processes into a web app that covers its needs.`,
-          'Engineered a wholesale e-commerce platform that reduced the operational cost of the company by 23%.',
-          'Integrated third-party providers into the company platform to standardize processes such as orders, shipping and accounting.',
-        ],
-      },
+        title: 'LearnFactory Ng',
+        content: {
+            position: 'Frontend Engineer',
+            period: 'March 2021 - October 2021',
+            items: [
+                `Collaborated with teammates to meet consumer goals thereby increasing customer requests to develop mobile/web applications by 20%.`,
+                'Standardized all output with a new, responsive , mobile-first approach and strategy which increased mobile traffic by 11%.',
+            ],
+        },
     },
     {
-      title: 'AppLivio',
-      content: {
-        position: 'Fullstack Developer',
-        period: 'March 2020 - November 2020',
-        items: [
-          'Developed a web app to communicate patients and doctors through a booked video call.',
-          'Implemented a serverless back-end using AWS services such as Chime SDK, DynamoDB and Amplify.',
-          'Architected the web app using React and Redux to manage the state of the app.',
-        ],
-      },
+        title: 'Vicmie Inc.',
+        content: {
+            position: 'Web Developer',
+            period: 'March 2019 - October 2020',
+            items: [
+                'Created entire enterprise website applications primarily using MERN stack. ',
+                'Ensured uninterrupted flow of business-critical operations by finishing daily tasks on time. On-time error analysis reduced downtime by 15%. ',
+            ],
+        },
     },
-    {
-      title: 'Rebus',
-      content: {
-        position: 'Fullstack Developer',
-        period: 'June 2017 - September 2019',
-        items: [
-          'Develop, upgrade and maintain multi-tenant software for multiple clients in different industries.',
-          'Engineered a solution that automatically creates an agenda for users to meet with their customers, the algorithm prioritizes customers based on location and sales potential.',
-          'Lead a team of 4 developers and managed to deliver, communicate and maintain reliable software.',
-        ],
-      },
-    },
-    {
-      title: 'ParkeApp',
-      content: {
-        position: 'CTO & Co-Founder',
-        period: 'November 2016 — May 2019',
-        items: [
-          'Engineered a minimal viable product',
-          'Get our first 100 clients',
-          'Start an acceleration and consolidation process with the main government funding entity in Colombia.',
-        ],
-      },
-    },
-  ];
+];

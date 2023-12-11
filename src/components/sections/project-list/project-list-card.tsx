@@ -28,7 +28,7 @@ export default function ProjectListCard(props: ProjectListCardProps) {
         <article
             className={clsx([
                 'mx-auto flex w-full max-w-5xl flex-col gap-6 sm:flex-row',
-                { 'sm:flex-col items-center': props.modal },
+                { 'items-center sm:flex-col': props.modal },
             ])}
         >
             <div className="relative mt-4 h-[300px] w-full overflow-hidden rounded-lg sm:w-[420px] xl:w-[620px]">
@@ -48,18 +48,22 @@ export default function ProjectListCard(props: ProjectListCardProps) {
                     </div>
 
                     <div className="flex gap-4 align-middle">
-                        <Link
-                            href={props.links.demo}
-                            className="h-fit rounded-sm bg-primary-foreground p-0.5"
-                        >
-                            <LayoutTemplate className="cursor-pointer text-2xl text-primary sm:text-4xl" />
-                        </Link>
-                        <Link
-                            href={props.links.github}
-                            className="h-fit rounded-sm bg-primary-foreground p-0.5"
-                        >
-                            <Code className="cursor-pointer text-2xl text-primary sm:text-4xl" />
-                        </Link>
+                        {props.links.demo && (
+                            <Link
+                                href={props.links.demo}
+                                className="h-fit rounded-sm bg-primary-foreground p-0.5"
+                            >
+                                <LayoutTemplate className="cursor-pointer text-2xl text-primary sm:text-4xl" />
+                            </Link>
+                        )}
+                        {props.links.github && (
+                            <Link
+                                href={props.links.github}
+                                className="h-fit rounded-sm bg-primary-foreground p-0.5"
+                            >
+                                <Code className="cursor-pointer text-2xl text-primary sm:text-4xl" />
+                            </Link>
+                        )}
                     </div>
                 </div>
                 <p className="flex-grow">{props.description}</p>
