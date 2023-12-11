@@ -8,8 +8,11 @@ import Projects from '@/components/sections/projects';
 import { EXPERIENCE_DATA, PROJECTS_DATA } from '@/base/config/constants';
 import Experience from '@/components/sections/experience';
 import Contact from '@/components/sections/contact';
+import { getPageViews } from '@/base/lib/requests';
 
 export default async function Page() {
+    const pageViews = await getPageViews();
+
     return (
         <>
             <nav className="inset-0 flex flex-col justify-between gap-4 overflow-hidden pb-12 md:sticky md:h-screen md:pt-16 lg:left-32">
@@ -36,7 +39,7 @@ export default async function Page() {
                 <About about={aboutJSON} />
                 <Projects projects={PROJECTS_DATA} />
                 <Experience experiences={EXPERIENCE_DATA}/>
-                <Contact contact={contactJSON}/>
+                <Contact contact={contactJSON} pageViews={pageViews}/>
             </div>
         </>
     );

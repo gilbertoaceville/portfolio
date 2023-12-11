@@ -3,6 +3,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { MouseEvent } from 'react';
+import { usePlausible } from 'next-plausible';
 
 import TechLinks from '@/components/modules/tech-links';
 
@@ -14,6 +15,18 @@ type ProjectCardProps = ProjectInfo & {
 };
 
 export default function ProjectCard(props: ProjectCardProps) {
+    const plausible = usePlausible();
+
+    const viewProject = () => {
+        if (!props.name) return null;
+
+        return plausible('View Project', {
+            props: {
+                project: props.name,
+            },
+        });
+    };
+
     const { handleCompanyClick, handleTechClick } = props;
     const isOdd = props.index % 2 !== 0;
     const content = props.modal ? props.company : props.label;
@@ -36,6 +49,7 @@ export default function ProjectCard(props: ProjectCardProps) {
                 'relative flex flex-col items-center xl:flex-row xl:items-end',
                 { 'xl:flex-row-reverse': isOdd },
             ])}
+            onClick={viewProject}
         >
             <div className="xl:max-w-fit xl:flex-grow">
                 <div className="flex flex-col justify-between gap-2 xl:flex-row xl:items-end">
