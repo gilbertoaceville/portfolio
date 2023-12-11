@@ -8,7 +8,7 @@ const metaDescription = `Gilbert James is a seasoned Front-End Engineer with a s
 
 const metaOgImages = [
   {
-    url: 'https://james-gilbert.vercel.app/og.jpg',
+    url: `${process.env.NEXT_PUBLIC_URL}og.jpg`,
     width: 1200,
     height: 630,
     alt: metaTitle,
@@ -16,7 +16,7 @@ const metaOgImages = [
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://james-gilbert.vercel.app/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL),
   title: metaTitle,
   description: metaDescription,
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en',
-    url: 'https://james-gilbert.vercel.app/',
+    url: process.env.NEXT_PUBLIC_URL,
     title: metaTitle,
     description: metaDescription,
     images: metaOgImages,
