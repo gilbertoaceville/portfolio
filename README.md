@@ -8,9 +8,9 @@ Most of the core components of this project have been been built, more features 
 
 ### Landing page with all my links
 
-![Screenshot - Home Page](/public/screenshot-1.png)
+![Screenshot - Home Page](./public/screenshot-1.png)
 
-![Screenshot - Project Page](/public/screenshot-2.png)
+![Screenshot - Project Page](./public/screenshot-2.png)
 
 ## Technologies
 
