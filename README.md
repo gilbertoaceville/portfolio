@@ -1,33 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+
+A personal website to showcase current projects. 
+
+## Project Status
+
+Most of the core components of this project have been been built, more features are expected to the added. Presently, the project is in a maintenace mode but will be updated as regularly as possible by the author.
+
+### Landing page with all my links
+
+![Screenshot - Home Page](./public/screenshot-1.png)
+
+![Screenshot - Project Page](./public/screenshot-2.png)
+
+## Technologies
+
+The website is built using the following technologies:
+
+-   [Next.js](https://nextjs.org/) 14: A framework for building React applications
+-   [TypeScript](https://www.typescriptlang.org/): A strongly-typed superset of JavaScript
+-   [TailwindCSS](https://tailwindcss.com/): A utility-first CSS framework
+-   [NextAuth.js](https://authjs.dev/): Authentication for the web
+-   [Vercel](https://vercel.com/): A cloud platform for static sites and Serverless Functions
+-   [Plausible](https://plausible.io/): A simple, open-source, lightweight (< 1 KB) and privacy-friendly web analytics system
+
 
 ## Getting Started
 
-First, run the development server:
+First, install the necessary dependencies:
+
+```bash
+npm install
+```
+
+then, run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the index page.
 
 ## Deploy on Vercel
 
