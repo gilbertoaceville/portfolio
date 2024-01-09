@@ -1,5 +1,33 @@
 export const PROJECTS_DATA: ProjectInfo[] = [
     {
+        name: 'Code Editor',
+        label: 'Website Platform',
+        type: 'website',
+        company: 'personal',
+        description:
+            'A resizable code editor switching language extension, having padding, theme and background selectors',
+        tech: ['Next.js', 'TailwindCSS', 'SCSS'],
+        image: '/personal/code-editor.webp',
+        links: {
+            github: 'https://github.com/gilbertoaceville/code-to-image',
+            demo: 'https://code-t-image.vercel.app/',
+        },
+    },
+    {
+        name: 'Task Manager',
+        label: 'Website Platform',
+        type: 'website',
+        company: 'personal',
+        description:
+            'A simple task manager incorporating clerk-auth as authentication manager',
+        tech: ['Next.js', 'Styled Components', 'Clerk'],
+        image: '/personal/t-manager.webp',
+        links: {
+            github: 'https://github.com/gilbertoaceville/c-task-manager',
+            demo: 'https://c-task-manager.vercel.app/',
+        },
+    },
+    {
         name: 'Dodonut',
         label: 'Website platform',
         type: 'website',
@@ -56,31 +84,30 @@ export const PROJECTS_DATA: ProjectInfo[] = [
         },
     },
     {
-        name: 'Beebole',
-        label: 'Marketing Website',
-        company: 'featured',
-        type: 'marketing',
+        name: 'Live Search App',
+        label: 'Website Platform',
+        company: 'personal',
+        type: 'website',
         description:
-            'Marketing website for time management tool, beebole is developed with gatsby under the hood and PiwikPro for all analytics.',
-        tech: ['Typescript', 'Gatsby', 'GraphQL', 'Netlify', 'Storyblok'],
-        image: '/featured/beebole.webp',
+            'A simple live search application integrated with upsplash api.',
+        tech: ['React', 'Netlify'],
+        image: '/personal/bluecube-live-search.webp',
         links: {
-            github: '',
-            demo: 'https://beebole.com/',
+            github: 'https://github.com/gilbertoaceville/bluecube-live-search-app',
+            demo: 'https://bluecube-live-search.netlify.app/',
         },
     },
     {
-        name: 'Deliverect',
-        label: 'Marketing Website',
-        company: 'featured',
-        type: 'marketing',
-        description:
-            'Marketing website managing online ordering operations, featuring a complex calculator to calculate estimations and online orders by vendors.',
-        tech: ['Javascript', 'Gatsby', 'GraphQL', 'Netlify', 'Contentful'],
-        image: '/featured/deliverect.webp',
+        name: 'Sample Store',
+        label: 'E-commerce',
+        company: 'personal',
+        type: 'eCommerce',
+        description: 'A mini e-commerce with cart mechanism built with Gatsby.',
+        tech: ['Redux', 'Gatsby', 'Vercel', 'Typescript'],
+        image: '/personal/sample-commerce.webp',
         links: {
-            github: '',
-            demo: 'https://www.deliverect.com/en',
+            github: 'https://github.com/gilbertoaceville/gatsby-ecommerce-with-redux',
+            demo: 'https://gatsby-ecommerce-with-redux.vercel.app/',
         },
     },
     {
@@ -88,65 +115,40 @@ export const PROJECTS_DATA: ProjectInfo[] = [
         label: 'Website Platform',
         company: 'personal',
         type: 'website',
-        description: 'A simple personal coffee shop project with live geolocation services.',
-        tech: ['Javascript', 'NextJS', 'Vercel', "NodeJS"],
+        description:
+            'A simple personal coffee shop project with live geolocation services.',
+        tech: ['Javascript', 'NextJS', 'Vercel', 'NodeJS'],
         image: '/personal/coffee-store.webp',
         links: {
             github: 'https://github.com/gilbertoaceville/geolocation-coffee-store-with-next',
             demo: 'https://geolocation-coffee-stores.vercel.app/',
         },
     },
-    {
-      name: 'Live Search App',
-      label: 'Website Platform',
-      company: 'personal',
-      type: 'website',
-      description: 'A simple live search application integrated with upsplash api.',
-      tech: ['React', 'Netlify'],
-      image: '/personal/bluecube-live-search.webp',
-      links: {
-          github: 'https://github.com/gilbertoaceville/bluecube-live-search-app',
-          demo: 'https://bluecube-live-search.netlify.app/',
-      },
-  },
-  {
-    name: 'Sample Store',
-    label: 'E-commerce',
-    company: 'personal',
-    type: 'eCommerce',
-    description: 'A mini e-commerce with cart mechanism built with Gatsby.',
-    tech: ['Redux', 'Gatsby', 'Vercel', 'Typescript'],
-    image: '/personal/sample-commerce.webp',
-    links: {
-        github: 'https://github.com/gilbertoaceville/gatsby-ecommerce-with-redux',
-        demo: 'https://gatsby-ecommerce-with-redux.vercel.app/',
-    },
-},
 ];
 
 export const EXPERIENCE_DATA: ExperienceInfo[] = [
     {
-        title: 'Bejamas',
+        title: 'IFMA',
         content: {
-            position: 'Frontend Developer',
-            period: 'February 2022 - Present',
+            position: 'Frontend Engineer',
+            period: 'October 2020 - Present',
             items: [
-                'Researched and developed climate sustainable web projects such as the Dodonut project, reducing website carbon emissions by >80% on each page visit and attracting potential investors in line with the company’s long-term visions.',
-                'Worked with a team to develop and maintain services via Headless CMS including but not limited to Contentful, Storyblok, Dato, Sanity following Agile/SCRUM/Kanban methodologies.',
-                'Successfully planned performant and fast website development with the tribe(team), directly contributed to the growth of the company’s revenue.',
-                'Optimized web performance on finalized projects by over 55%, leveraging tools like WebPageTest, and Statsy for precise analysis and actionable insights. ',
+                'Analyzed and implemented optimization cutting edge technologies on existing code base increasing page load by <3 secs.',
+                'Set performance metrics and developed functionalities for the second version of the streaming web app while assessing the designs for technical feasibility gaining investors trust with monetary commitment of $100K+',
+                'Slashed CI/CD deploy times on AWS infrastructure by 75% and optimized development workflow through code reviews thereby expediting the delivery of features and improvements.',
             ],
         },
     },
     {
-        title: 'IFMA',
+        title: 'Bejamas',
         content: {
-            position: 'Senior Frontend Developer',
-            period: 'October 2020 - February 2022',
+            position: 'Frontend Developer',
+            period: 'February 2022 - December 2023',
             items: [
-                'Analyzed and implemented optimization cutting edge technologies on existing code base increasing page load by <3 secs.',
-                'Worked with the design team to develop new designs and functionalities for the second version of the streaming web app while assessing the designs for technical feasibility gaining investors trust with extra monetary commitment of $30000.',
-                'Effectively interacted with the Back-End Department regarding web application issues, working closely to develop innovative solutions notably the company’s streaming application.',
+                'Researched and developed climate sustainable web projects such as the Dodonut project, reducing website carbon emissions by >80% on each page visit and attracting potential investors in line with the company’s long-term visions',
+                'Developed and maintained services via Headless CMS following Agile/SCRUM/Kanban methodologies increasing customer retention by 80%',
+                `Planned and executed high-performance website applications within the team, directly contributed to the company's revenue`,
+                ' Optimized web performance on finalized projects by over 55%, leveraging tools like WebPageTest, and Statsy for precise analysis and actionable insights reducing user bounce rate.',
             ],
         },
     },
@@ -156,8 +158,8 @@ export const EXPERIENCE_DATA: ExperienceInfo[] = [
             position: 'Frontend Engineer',
             period: 'March 2021 - October 2021',
             items: [
-                `Collaborated with teammates to meet consumer goals thereby increasing customer requests to develop mobile/web applications by 20%.`,
-                'Standardized all output with a new, responsive , mobile-first approach and strategy which increased mobile traffic by 11%.',
+                `Boosted customer requests for mobile/web applications by 20% by actively contributing to team efforts in meeting consumer goals.`,
+                'Enhanced mobile traffic by 11% through the implementation of a standardized, responsive, and mobile-first approach across all outputs.',
             ],
         },
     },
@@ -167,8 +169,8 @@ export const EXPERIENCE_DATA: ExperienceInfo[] = [
             position: 'Web Developer',
             period: 'March 2019 - October 2020',
             items: [
-                'Created entire enterprise website applications primarily using MERN stack. ',
-                'Ensured uninterrupted flow of business-critical operations by finishing daily tasks on time. On-time error analysis reduced downtime by 15%. ',
+                'Built dynamic enterprise websites using the MERN stack, leading to increase in user engagement and growth in customer ',
+                'Optimized business operations with timely task completion, reducing downtime by 15% through effective bug analysis.',
             ],
         },
     },
