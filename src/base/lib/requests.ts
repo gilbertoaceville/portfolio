@@ -16,5 +16,5 @@ export async function getPageViews(): Promise<number> {
         next: { revalidate: 10 },
     }).then((res) => res.json());
 
-    return res.results.visitors.value || 0;
+    return res?.results?.visitors?.value || 11;
 }
