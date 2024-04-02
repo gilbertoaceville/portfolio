@@ -23,7 +23,6 @@ The website is built using the following technologies:
 -   [Vercel](https://vercel.com/): A cloud platform for static sites and Serverless Functions
 -   [Plausible](https://plausible.io/): A simple, open-source, lightweight (< 1 KB) and privacy-friendly web analytics system
 
-
 ## Getting Started
 
 First, install the necessary dependencies:
@@ -39,9 +38,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the index page.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
